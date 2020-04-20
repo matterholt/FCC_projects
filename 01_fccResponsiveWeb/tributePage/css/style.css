@@ -1,12 +1,11 @@
 :root {
-    --creame-main: #F8F4E4;
+    --creame-main: #f8f4e4;
     font-size: 62.8%;
 }
 
 body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
 #title {}
@@ -14,6 +13,7 @@ body {
 .header__titleContainer {
     display: flex;
     flex-flow: column;
+    justify-content: center;
     align-items: center;
     min-width: 100vw;
 }
@@ -39,8 +39,16 @@ body {
 }
 
 #img-div {
-    width: 250px;
     background: white;
+    display: flex;
+    flex-flow: column;
+    max-width: 250px;
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
 }
 
 #img-caption {
@@ -63,8 +71,14 @@ body {
     flex-flow: column;
     align-items: center;
     max-width: 550px;
+    padding-top: 35px;
 }
 
 .tribute__list {
     line-height: 25px;
+}
+
+.tribute__footer {
+    min-width: 80vw;
+    padding: 30px;
 }
