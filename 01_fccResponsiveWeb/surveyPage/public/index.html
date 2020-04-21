@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FCC Survey</title>
-  </head>
-  <h1>Survey the land</h1>
 
-  <body>
-    <script src="../src/index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FCC Survey</title>
+</head>
+
+<body>
+  <div id="header">
+
+
+  </div>
+
+  <div class="coffeeInfo">
+    <form id="survey-form" class="coffeeInfo__card" action="">
+
+      <div id="survey-form">
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" required placeholder="John C Doe" name="userName" id="name">
+        <label for="email" id="email-label">E-mail</label>
+        <input type="email" required placeholder="johnDoe@freeCodeCamp.com" name="userEmail" id="email"
+          pattern=".+@+.com">
+        <label for="cupPerDay" id="number-label">How many cup per day</label>
+        <input id="number" type="number" name="cupPerDay" placeholder="Cups Per Day" step="1" min="1" max="1000">
+
+        <div id="radio">
+          <h3>When do you drink the most coffee</h3>
+          <ul style="list-style: none;">
+            <li><label><input type="radio" name="radio-button" value="1">AM </label></li>
+            <li><label><input type="radio" name="radio-button" value="2">PM </label></li>
+            <li><label><input type="radio" name="radio-button" value="3">Never Stop </label></li>
+          </ul>
+        </div>
+
+        <div id="radio">
+          <h3>Favorite Coffee types</h3>
+          <ul style="list-style:none">
+            <li><label><input type="checkbox" name="favstyle" value="Cappuccino" id="favoriteType">Cappuccino</label>
+            </li>
+            <li><label><input type="checkbox" name="favstyle" value="FlatWhite" id="favoriteType">Flat
+                White</label></li>
+            <li><label><input type="checkbox" name="favstyle" value="IrishCoffee" id="favoriteType">Irish
+                Coffee</label></li>
+            <li><label><input type="checkbox" name="favstyle" value="LongBlack" id="favoriteType">Long
+                Black</label></li>
+            <li><label><input type="checkbox" name="favstyle" value="CaffeeMocha" id="favoriteType">Caffee
+                Mocha</label></li>
+            <li><label><input type="checkbox" name="favstyle" value="CaffeAmericano" id="favoriteType">Caffe
+                Americano</label></li>
+            <li><label><input type="checkbox" name="favstyle" value="CaffeMacchiato" id="favoriteType">Caffe
+                Macchiato</label></li>
+            <li><label><input type="checkbox" name="favstyle" name="favstyle" value="Espresso"
+                  id="favoriteType">Espresso</label></li>
+            <li><label><input type="checkbox" name="favstyle" value="CaffeAmericano" id="favoriteType">Caffe
+                Americano</label></li>
+          </ul>
+        </div>
+        <div id="dropdown">
+          <h3>What kind of Roast do you enjoy?</h3>
+          <select name="favRoast" id="dropdown">
+            <option value="dark">Dark</option>
+            <option value="Medium">Medium</option>
+            <option value="Light">Light</option>
+          </select>
+        </div>
+
+        <div id="textarea">
+          <h3>Favorite thing to add to coffee </h3>
+          <textarea name="moreComments" id="textArea"></textarea>
+        </div>
+        <button type="submit" id="submit"> Submit</button>
+    </form>
+  </div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <script src="../src/index.js"></script>
+</body>
+
 </html>
