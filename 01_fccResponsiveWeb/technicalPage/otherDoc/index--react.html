@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: -webkit-box;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+
+        #navbar {
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            background-color: #c5dcdd;
+            overflow: auto;
+            color: #222;
+            text-align: center;
+        }
+
+        .nav-header {
+            font-size: 22px;
+            font-weight: 900;
+            padding: 10px 0px;
+            margin: 15px 0;
+        }
+
+        .navbar__container {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-flow: column;
+            -webkit-box-align: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-link {
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        .nav-link a {
+            padding: 10px 0px;
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            color: #344;
+            font-weight: 100;
+        }
+
+        .nav-link:hover {
+            background: #a9bdbe;
+        }
+
+        #main-doc {
+            margin-left: 325px;
+            width: 50%;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            min-height: 100vh;
+        }
+
+        .section_Header {
+            margin-top: 25px;
+            font-weight: 900;
+            font-size: 30px;
+        }
+
+        .codeContiner {
+            background-color: lightgray;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+    <nav id="navbar">
+        <header class="nav-header">Rect</header>
+        <ul class="navbar__container">
+            <li class="nav-link">
+                <a href="#Introduction">
+                    Introduction
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#useState">
+                    useState
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#useEffect">
+                    useEffect
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#useReducer">
+                    useReducer
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#useContext">
+                    useContext
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#CustomHooks">
+                    CustomHooks
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header class="section_Header">Introduction</header>
+            <p>
+                Hooks are a new addition in React 16.8. They let you use state and other React features without writing
+                a
+                class.
+                <p> What does Hooks offer</p>
+
+                <ul>
+                    <li>You are Able to opt-in. Classes are not going anywhere and there is not a need to learn Hooks.
+                    </li>
+                    <li>Backwards-compatible, hit the ground running with out worry about breaking changes</li>
+                    <li>Hooks don't replace knowledge of react</li>
+                </ul>
+                <p>Why add something like Hooks</p>
+                <ul>
+                    <li>Complex components become hard to understand</li>
+                    <li>Classes confuse both people and machines </li>
+
+                </ul>
+        </section>
+
+        <section id="useState" class="main-section">
+            <header class="section_Header">useState</header>
+            <p>Returns a stateful value, and a function to update it.
+
+                During the initial render, the returned state (state) is the same as the value passed as the first
+                argument
+                (initialState).
+
+                The setState function is used to update the state. It accepts a new state value and enqueues a re-render
+                of
+                the component.</p>
+            <div class="codeContiner">
+
+                <p>Declare new state within a component as such</p>
+                <code>
+                    const [state, setState] = useState('')
+                </code>
+                <p>This hook is basicly a closure, which can hand rolled </p>
+
+            </div>
+
+            <a href="https://reactjs.org/docs/hooks-reference.html#usestate"> React useState </a>
+        </section>
+        <section id="useEffect" class="main-section">
+            <header class="section_Header">useEffect</header>
+            <p>
+                Accepts a function that contains imperative, possibly effectful code.
+                Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body
+                of a
+                function component (referred to as React’s render phase). Doing so will lead to confusing bugs and
+                inconsistencies in the UI.
+                Instead, use useEffect. The function passed to useEffect will run after the render is committed to the
+                screen. Think of effects as an escape hatch from React’s purely functional world into the imperative
+                world.
+            </p>
+            <a href="https://reactjs.org/docs/hooks-reference.html#useeffect">React useEffect</a>
+        </section>
+        <section id="useReducer" class="main-section">
+            <header class="section_Header">useReducer</header>
+            <p>
+                An alternative to useState. Accepts a reducer of type , and returns the current state paired with a
+                dispatch
+                method. (If you’re familiar with Redux, you already know how this works.)
+            </p>
+            useReducer is usually preferable to useState when you have complex state logic that involves multiple
+            sub-values
+            or when the next state depends on the previous one. useReducer also lets you optimize performance for
+            components
+            that trigger deep updates because you can pass dispatch down instead of callbacks.
+            <a href="https://reactjs.org/docs/hooks-reference.html#usereducer">React useReducer</a>
+
+        </section>
+        <section id="useContext" class="main-section">
+            <header class="section_Header">useContext</header>
+            <p>
+                ccepts a context object (the value returned from React.createContext) and returns the current context
+                value
+                for that context. The current context value is determined by the value prop of the nearest above the
+                calling
+                component in the tree.
+
+            </p>
+            <a href="https://reactjs.org/docs/hooks-reference.html#usecontext">React useContext</a>
+
+        </section>
+        <section id="CustomHooks" class="main-section">
+            <header class="section_Header">CustomHooks</header>
+            <p>Building your own Hooks lets you extract component logic into reusable functions.
+
+                When we want to share logic between two JavaScript functions, we extract it to a third function. Both
+                components and Hooks are functions, so this works for them too!
+
+                Since Hooks are functions, we can pass information between them.
+            </p>
+            <a href="https://reactjs.org/docs/hooks-custom.html">React Custom Hook</a>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

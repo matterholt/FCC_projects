@@ -1,230 +1,145 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            display: -webkit-box;
-            display: flex;
-            background-color: #f1f1f1;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCC Tech Doc</title>
+  
+<link rel="stylesheet" href="style.css">
 
-        #navbar {
-            position: fixed;
-            height: 100vh;
-            width: 200px;
-            background-color: #c5dcdd;
-            overflow: auto;
-            color: #222;
-            text-align: center;
-        }
-
-        .nav-header {
-            font-size: 22px;
-            font-weight: 900;
-            padding: 10px 0px;
-            margin: 15px 0;
-        }
-
-        .navbar__container {
-            display: -webkit-box;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            flex-flow: column;
-            -webkit-box-align: center;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-        }
-
-        .nav-link {
-            font-size: 20px;
-            width: 100%;
-            text-align: center;
-            margin: 0 5px;
-        }
-
-        .nav-link a {
-            padding: 10px 0px;
-            display: block;
-            cursor: pointer;
-            text-decoration: none;
-            color: #344;
-            font-weight: 100;
-        }
-
-        .nav-link:hover {
-            background: #a9bdbe;
-        }
-
-        #main-doc {
-            margin-left: 325px;
-            width: 50%;
-            scroll-behavior: smooth;
-        }
-
-        section {
-            min-height: 100vh;
-        }
-
-        .section_Header {
-            margin-top: 25px;
-            font-weight: 900;
-            font-size: 30px;
-        }
-
-        .codeContiner {
-            background-color: lightgray;
-            padding: 10px;
-        }
-    </style>
 </head>
-
 <body>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+<div class='layout'>
 
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <nav id="navbar" class="nav">
+    <header class="menuHeader">JavaScript <br>Knowledge</header>
 
-    <nav id="navbar">
-        <header class="nav-header">Rect</header>
-        <ul class="navbar__container">
-            <li class="nav-link">
-                <a href="#Introduction">
-                    Introduction
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#useState">
-                    useState
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#useEffect">
-                    useEffect
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#useReducer">
-                    useReducer
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#useContext">
-                    useContext
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#CustomHooks">
-                    CustomHooks
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <main id="main-doc">
-        <section id="Introduction" class="main-section">
-            <header class="section_Header">Introduction</header>
-            <p>
-                Hooks are a new addition in React 16.8. They let you use state and other React features without writing
-                a
-                class.
-                <p> What does Hooks offer</p>
+    <div id="navbar-links" class="nav -isOpen">
+      <a href=#intro class="nav-link">Intro</a>
+      <a href=#datatypes class="nav-link">DataTypes</a>
+      <a href=#variables class="nav-link">Variables</a>
+      <a href=#function class="nav-link">Function</a>
+      <a href=#scope class="nav-link">Scope</a>
+      <a href=#hoisting class="nav-link">Hoisting</a>
+    </div>
 
-                <ul>
-                    <li>You are Able to opt-in. Classes are not going anywhere and there is not a need to learn Hooks.
-                    </li>
-                    <li>Backwards-compatible, hit the ground running with out worry about breaking changes</li>
-                    <li>Hooks don't replace knowledge of react</li>
-                </ul>
-                <p>Why add something like Hooks</p>
-                <ul>
-                    <li>Complex components become hard to understand</li>
-                    <li>Classes confuse both people and machines </li>
+    <div class="menuButtonContainer">
 
-                </ul>
-        </section>
+      <button id="menuControl" class="menuButton">
+        <svg id="menuSVGIcon" transform="rotate(90)" width="10" height="20" viewBox="0 0 57 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M53 4L3 34.4225L53 64" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </nav>
 
-        <section id="useState" class="main-section">
-            <header class="section_Header">useState</header>
-            <p>Returns a stateful value, and a function to update it.
+  <main id="main-doc">
 
-                During the initial render, the returned state (state) is the same as the value passed as the first
-                argument
-                (initialState).
+    <section id="intro" class="main-section">
+      <header>Intro</header>
+      <p>Some of JavaScript information to help on the programing journey</p>
+    </section>
 
-                The setState function is used to update the state. It accepts a new state value and enqueues a re-render
-                of
-                the component.</p>
-            <div class="codeContiner">
+    <section id="datatypes" class="main-section">
+      <header>Datatypes</header>
+      <p>In javascript there are 7 datatypes that are evealuated they are listed as follows</p>
+      <ul>
+        <li>string</li>
+        <li>number</li>
+        <li>Boolean</li>
+        <li>undefined</li>
+        <li>BigInt</li>
+        <li>Symbol</li>
+        <li>null</li>
+        <ul>
+    </section>
 
-                <p>Declare new state within a component as such</p>
-                <code>
-                    const [state, setState] = useState('')
-                </code>
-                <p>This hook is basicly a closure, which can hand rolled </p>
+    <section id="variables" class="main-section">
+      <header>Variables</header>
+      <p>There is 3 ways to define a varaible</p>
+      <ul>
+        <li>
+          <h3>var</h3>
+          <p>The original and old way to define variables. What needs to be known is var is able to be changed at any time. No block scope, the value can be changed inside a function. Anything that is defined with var will be hoisted will be initialized as<code>undefine</code>.</p>
+        </li>
+        <li>
+          <h3>let</h3>
+          <p>Introduced in ES6/2015. Now has code block meaning that function keeps variables declared in the scope of a function. It can also be redefined as a new value. Is hoisted to the top of the block but is not initialized to a value and the outcome is <code>ReferenceError: Cannot access 'calledBefore' before initialization</code>. which is different from "ReferenceError: 'notInCode' is not defined".</p>
+        </li>
+        <li>
+          <h3>const</h3>
+          <p>Introduced in ES6/2015. Now has code block meaning that function keeps variables declared in the scope of a function. The big difference is that the const is a constant which means that the value can not be changed. Is hoisted to the top of the block but is not initialized to a value and the outcome is <code>ReferenceError: Cannot access 'calledBefore' before initialization</code>. which is different from "ReferenceError: 'notInCode' is not defined".</p>
+        </li>
+    </section>
 
-            </div>
+    <section id="function" class="main-section">
+      <header>Function</header>
+      <p>Functions can take parameters or not, even take multiple parameters. Which are bound to the scope of the function</p>
+      <p>Functions produce values and will need to return said value. but functions can produce side effects. Like removing a CSS class one a HTML tag</p>
+      <p>Allowing to extract a section of code into smaller bits. Removes duplication of code and keeping codebase easier to understand. JavaScript has 3 basic ways to define a function</p>
+      <ul>
+        <li>
+          <h3>Regular Named Declaration</h3>
+          <p>Pretty standard way of declaring function, </p>
+          <code>
+            function logInCaps (item){
+            const capItem = item.toUpperCase()
+            console.log(capItem)
+            return capItem
+            }
+          </code>
+        </li>
+        <li>
+          <h3>Varaible Declaration</h3>
+          <p>Same capabilities as a regular declaration, but is possible to store a function as a value, pass as an argument, and so on. Basically do the same thing as regular declared values.</p>
+          <code>
+            const logInCaps = function (item){
+            const capItem = item.toUpperCase()
+            console.log(capItem)
+            return capItem
+            }
+          </code>
+        </li>
+        <li>
+          <h3>Arrow functions</h3>
+          <p>
+            ES6/2015 feature. Uses<code>this</code> from the immediate outer scope, avoiding binding to the scope where declared ... <code>.bind(this)</code>.
+            Able to have an implicit return, no need to have a <code>return</code>.
 
-            <a href="https://reactjs.org/docs/hooks-reference.html#usestate"> React useState </a>
-        </section>
-        <section id="useEffect" class="main-section">
-            <header class="section_Header">useEffect</header>
-            <p>
-                Accepts a function that contains imperative, possibly effectful code.
-                Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body
-                of a
-                function component (referred to as React’s render phase). Doing so will lead to confusing bugs and
-                inconsistencies in the UI.
-                Instead, use useEffect. The function passed to useEffect will run after the render is committed to the
-                screen. Think of effects as an escape hatch from React’s purely functional world into the imperative
-                world.
-            </p>
-            <a href="https://reactjs.org/docs/hooks-reference.html#useeffect">React useEffect</a>
-        </section>
-        <section id="useReducer" class="main-section">
-            <header class="section_Header">useReducer</header>
-            <p>
-                An alternative to useState. Accepts a reducer of type , and returns the current state paired with a
-                dispatch
-                method. (If you’re familiar with Redux, you already know how this works.)
-            </p>
-            useReducer is usually preferable to useState when you have complex state logic that involves multiple
-            sub-values
-            or when the next state depends on the previous one. useReducer also lets you optimize performance for
-            components
-            that trigger deep updates because you can pass dispatch down instead of callbacks.
-            <a href="https://reactjs.org/docs/hooks-reference.html#usereducer">React useReducer</a>
+          </p>
+          <p>Not able to use arrow function as a constructor, since the <code>this</code> is bound to the created function</p>
+          <code>
+            const logInCaps = (item) =>{
+            const capItem = item.toUpperCase()
+            console.log(capItem)
+            return capItem
+            }
+          </code>
+        </li>
+      </ul>
 
-        </section>
-        <section id="useContext" class="main-section">
-            <header class="section_Header">useContext</header>
-            <p>
-                ccepts a context object (the value returned from React.createContext) and returns the current context
-                value
-                for that context. The current context value is determined by the value prop of the nearest above the
-                calling
-                component in the tree.
+    </section>
 
-            </p>
-            <a href="https://reactjs.org/docs/hooks-reference.html#usecontext">React useContext</a>
+    <section id="scope" class="main-section">
+      <header>Scope</header>
+      <p>Basicly two type of scopes, global and local. Global is able to access variables that are defined by <code>let</code> or <code>const</code> and other bindings from any where in the code base. Local are varaiables that are contained within a fucntion and everytime a function is called a new instance of the variable are created. Variables that are local are only accessable to the function where are defined and any children functions that are defined inside the scope of the partent function.</p>
+    </section>
 
-        </section>
-        <section id="CustomHooks" class="main-section">
-            <header class="section_Header">CustomHooks</header>
-            <p>Building your own Hooks lets you extract component logic into reusable functions.
+    <section id="hoisting" class="main-section">
+      <header>Hoisting</header>
+      <p>Is a JavaScript mechanism that will bring place the variables to the top. The JavaScript engine finds which will allow the variables to be used before they are declared. This doesn't mean that the variables are initialized, the only declaration of said variables. This is why we get an 'undefined' if we call a variable before it is initialized to a value.</p>
+    </section>
 
-                When we want to share logic between two JavaScript functions, we extract it to a third function. Both
-                components and Hooks are functions, so this works for them too!
-
-                Since Hooks are functions, we can pass information between them.
-            </p>
-            <a href="https://reactjs.org/docs/hooks-custom.html">React Custom Hook</a>
-
-        </section>
-    </main>
-
+  </main>
+</div>
+      <script src = "./main.js" type = "text/javascript"/></script>
+  
+  
 </body>
-
 </html>

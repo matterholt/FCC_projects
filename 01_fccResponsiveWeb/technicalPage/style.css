@@ -1,0 +1,114 @@
+:root {
+    --main-My-color: #005f6b;
+    --translateY: translateY(-390px);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    grid-template-areas: "navigation main";
+}
+
+#main-doc {
+    font-size: 15px;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+}
+
+.main-section {
+    max-width: 550px;
+    min-height: 100vh;
+}
+
+.main-section header {
+    font-size: 2em;
+    border-bottom: 4px solid var(--main-My-color);
+    margin-top: 50px;
+}
+
+.menuHeader {
+    margin: 25px 0;
+    font-size: 1.5rem;
+}
+
+#navbar {
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    background-color: #fcfcfc;
+}
+
+.nav-link {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 4px 5px 10px #a7a7a740;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 20px;
+}
+
+.nav-link:hover {
+    background-color: #c4d7d9;
+}
+
+.menuButtonContainer {
+    position: relative;
+    height: 40px;
+    transition: all 1s ease-out;
+    width: 250px;
+}
+
+.menuButton {
+    transition: all 1s ease-out;
+    background-color: var(--main-My-color);
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    padding: 5px 8px 0 6px;
+    width: 250px;
+    height: 30px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfcfc;
+    padding-bottom: 25px;
+}
+
+.-isClose {
+    transition: all 1s ease-out;
+    transform: var(--translateY);
+    opacity: 0;
+}
+
+.-isOpen {
+    transition: all 1s ease-out;
+    padding-bottom: 25px;
+    transform: translateY(0px);
+    opacity: 1;
+    width: 250px;
+}
+
+.-menuButtonTravel {
+    transition: all 1s ease-out;
+    transform: var(--translateY);
+}
+
+@media screen and (max-width: 530px) {
+    #navbar {
+        height: 150px;
+        width: 100vw;
+    }
+
+    .layout {
+        display: grid;
+        grid-template-rows: 150px 1fr;
+        grid-template-columns: 100vw;
+        grid-template-areas: "navigation""main";
+    }
+}
